@@ -1,0 +1,64 @@
+General Remarks
+
+The horoscope files(.hor) and the place-database(placedb.dat) of Morinus can be used.
+
+The bounds can only be shown with colors in the hellenistic chart, so in b&w they won't be shown.
+
+There are many examples of how to use a city in Horoscope/Data and click on Place-button (e.g. GMT+ or GMT-).
+
+The ephemeris files shouldn't be copied to the SWEP folder because there will be a program-crash (it's some kind of a unicode problem, I haven't managed to solve yet). The built-in Moshier ephemeris of the Swiss Ephemeris will be used which gives exact positions between 3000BC-3000AD.
+
+You need to left-click on the "Windows"-popup-menu on chart-windows in order for the cascaded popup-menu get displayed.
+
+Window-management: works like in Morinus. The opened windows get closed if new horoscope is loaded, data of the chart change or most of the Options change. The contents of the windows opened via the popup-menu of Charts/SecondaryDirections or Charts/Elections get updated according to stepper dialog.
+
+The window of Charts/SecondaryDirections, Charts/Revolutions and Charts/Transits gets displayed right behind the main window (only on Windows). This is a minor inconvenience.
+
+Unfortunately it's only possible to save the contents of a window to postscript with TkInter, so no bmp, jpg, png, etc. No popular image editor can convert postscript to any common format, that's why there is no "Horoscope/Save as bmp".
+
+sweastronomy.so(Linux), sweastronomy.pyd(Windows) is an extension module (a dll) that reads from the swiss ephemeris files(or computes the planetary positions) and also computes many things like quadrant housecusps, ayanamsa, etc.
+
+Max 12 symbols can be displayed in angular places in the hellenistic chart, max 7 otherwise.
+
+In the outer chart max 12 symbols in every place in the hellenistic chart.
+
+The software displays the seven planets first, so they will always be shown.
+
+If the topocentric option is selected then the topocentric positions will be shown and used everywhere(Tables, Charts(radix, revolutions, ...), PDs).
+
+Primary Directions(Placidus(semiarc), i.e. Ptolemy): it was tested with Morinus. There are fewer options in Valens but the "User" has aspects too. No placidean "mundane" PDs, so the aspects are always computed in the Ecliptic (with or without latitude).
+
+FindTime: Geocentric positions and tropical longitudes(degrees: 0-360) are required.
+
+5000BC-5000AD will be searched if the program finds the Swiss Ephemeris otherwise 3000BC-3000AD.
+
+Search starts from 1/1/1(january 1, 1st year) if BC is not checked, -1/1/1 if it is checked and finds max. one chart/day.
+
+Use(minutes, seconds, retr): if not checked  then they won't count: e.g. given planetary position is 239d 7m 49s. E.g. 239 0m 0s or e.g. 239 37m 34s will also be found because the program will check the degree only.
+
+If retrograde is unchecked then the planet will be found according to its longitude only, it won't matter if it's retrograde or not.
+
+Approximation: the given longitude (degree, minute, second) will be added to and subtracted from the given planetary longitudes.
+
+E.g. the longitude of a planet is 239d 27m 49s and the approximation-minute is 20 then a range will be searched (239d 7m 49s - 239d 47m 49s). The longitude of the planet will be searched in this range. This range will be calculated for every planet.
+
+This is useful in case of charts created from older ephemerides where the positions are not that exact.
+
+Online search: (Horoscope/Data/Place dialog) Valens uses the GeoNames online database. There is a slider controlling the size of the online-list. The greater the value the slower the data acquisition will be. In case of only one result (i.e one city) the data will be immediately written in the fields without popping up a list.
+
+Lot-editor: LT: Light of the Time, LD: Lord of Day, LH: Lord of Hour, DE:Degree, RE: Reference (Lot can refer to another lot), "!" means Lord of something.
+
+Zodiacal Releasing: Left-click on a row to see L3, L4. Time is shown according to the settings in Horoscope/Data dialog (time-zone, DST).
+
+The Options menu items (Automatic Save, Save and Reload) are for managing the Options.
+
+If Automatic Save is checked then the program will immediately save the options-settings after you change them. If you don't check Automatic Save and you changed the options-settings then you have to save them anytime you want by clicking on Save(if you don't save the settings before closing the program they won't be saved).
+
+The changed options will be saved in the option file.
+
+You can discard all your changed/saved options-settings by clicking on Reload. (e.g. change the color of the Frame of the radix horoscope to red, press Ok and you will see it in red color, now press reload).
+
+In the Speculum-window you need to scroll down to see the transsaturnian planets.
+
+In Options/Colors you can set the text-colors to black in the tables.
+

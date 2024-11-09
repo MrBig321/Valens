@@ -1,0 +1,121 @@
+Installation
+
+!!NOTE that the Windows-binary (i.e. ValensExe.zip) was built a long time ago, and as far as I can remember the software crashes (i.e. dies), 
+	if we change the Options/Colors. This was fixed in the source code a long time ago, but I had no Windows to rebuild it.
+
+******************************************************************
+
+Linux
+
+Install python3 and tkinter and the font (Valens/Res/Valens.ttf).
+
+On Debian and Ubuntu Linux the name of the packages are: python3 and python3-tk.
+
+Install font Valens/Res/Valens.ttf. Perhaps double left-click on Valens.ttf and pressing "Install" also works 
+but I usually only copy it to ".fonts" folder in my HOME.
+
+Download ExtensionMod.zip and copy ExtensionMod/Linux/32bit/sweastronomy.so to the Valens folder, if you have 32-bit Linux or 
+if 32bit-python3 is installed on your computer. Otherwise copy ExtensionMod/Linux/64bit/sweastronomy.so to the Valens folder.
+
+How to start the program (after you installed everything):
+
+1. Right-click on valens.py file and go to "Properties"
+
+2. Find "Permission" and enable Execute (by checking "Allow executing file as program")
+
+3. Start program with double left-click on valens.py file and press "Run"
+
+The first two steps only need to be done once, of course, so next time just do step 3.
+
+Install from Terminal: (Ubuntu/Debian Linux)
+
+sudo apt-get install python3
+
+sudo apt-get install python3-tk
+
+(Install the packages below like the ones above:
+python3, python3-dev, python3-tk, python3-pil, python3-pil.imagetk, python3-pip
+
+pip install pyscreenshot
+ 
+# pil and pyscreenshot are necessary for PRINT ; if we don't install these packages, then PRINT in the context menues will crash)
+
+Font:
+
+First check if the folder already exists in the HOME (in a Terminal):
+
+ls -a
+
+If doesn't exist, then you can create the ".fonts" folder in your HOME and copy Valens.ttf in it.
+
+Note that the folder starts with a "."(dot), so its a hidden one.
+
+The folder can be easily created from the Terminal in the HOME:
+
+mkdir .fonts
+
+Some basic Linux commands: ls (list), pwd (print working directory), cd (change directory)
+
+Initially the Terminal puts you in your HOME. If you type:
+
+pwd
+
+it prints /home/rob in my case. ls lists the folder's contents. cd Valens will change to the Valens folder 
+if Valens is a folder in your HOME. "cd .." changes folder up a level (without the quotes).
+
+See above how to get sweastronomy.so.
+
+Start Valens from a Terminal (from the Valens folder):
+
+python3 ./valens.py
+
+******************************************************************
+
+Windows
+
+Windows-binary(the exe-file): Download ValensExe.zip and unzip it.
+
+Install font ValensExe/Res/Valens.ttf:
+
+WinXP: copy the ttf-file to Control Panel --> Fonts
+
+Win7: Double click on Valens.ttf and Install.
+
+Double-clicking on valens.exe starts the program.
+
+The Windows-binary already contains python3, tkinter and sweastronomy.pyd.
+
+The source:
+
+1. download valens.zip (see below) and unzip it.
+
+Install python3 and tkinter and the font (Valens/Res/Valens.ttf):
+
+2. download python-3.4.1.msi ( Windows x86 MSI Installer ). It contains both python3 and tkinter.
+
+During the installation of python set "Add python.exe to Path" in the "Customize python-3.4.1" window.
+
+3. download ExtensionMod.zip and unzip it, then copy ExtensionMod/Win/32bit/sweastronomy.pyd to the Valens folder. 
+This sweastronomy.pyd is a 32-bit dll. This is why we downloaded the 32-bit (i.e. x86) python3.
+
+4. Install font Valens/Res/Valens.ttf. See the Windows-binary above to install the font.
+
+Start Valens from a CommandPrompt (from the Valens folder):
+
+python valens.py
+
+Note: As far as I know on Windows both python2 and python3 are called python. 
+It can cause problems to have both python2.x and python3 installed on a computer on Windows.
+
+I recommend unistalling python2 before installing python3, or changing the Path to the appropriate python executable in the 
+Environment variables, whenever you want to use the other python.
+
+******************************************************************
+
+Mac OS
+
+I couldn't test it on Mac. The 64-bit sweastronomy.so is available.
+
+Download ExtensionMod.zip (see below) and copy sweastronomy.so in the Valens folder from ExtensionMod/Mac/64bit/sweastronomy.so.
+
+
