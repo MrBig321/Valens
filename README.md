@@ -4,6 +4,8 @@ Valens was programmed with python3 and tkinter(python's official GUI).
 It's a simplified Morinus with hellenistic techniques added.
 It is not easy (if not impossible) to start Morinus(traditional and modern) from source anymore.
 This is why I decided to write Valens.
+Note that the executables of Morinus(modern and traditional version) are also available here in the Web folder.
+They were built a long time ago.
 
 ## Features
 
