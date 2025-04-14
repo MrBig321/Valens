@@ -1,6 +1,6 @@
  # Valens
 
-Valens was programmed with python3 and tkinter(python's official GUI).
+Valens astrology software was programmed with python3 and tkinter(python's official GUI).
 It's a simplified Morinus with hellenistic techniques added.
 It is not easy (if not impossible) to start Morinus(traditional and modern) from source anymore.
 This is why I decided to write Valens.
